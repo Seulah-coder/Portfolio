@@ -9,6 +9,8 @@
 (function() {
   "use strict";
 
+  $('#header').load('header.html');
+
   /**
    * Header toggle
    */
@@ -16,10 +18,12 @@
 
   function headerToggle() {
     document.querySelector('#header').classList.toggle('header-show');
+  
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
-  }
+  
   headerToggleBtn.addEventListener('click', headerToggle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -32,6 +36,7 @@
     });
 
   });
+
 
   /**
    * Toggle mobile nav dropdowns
